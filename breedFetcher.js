@@ -15,7 +15,7 @@ const fetchBreedDescription = function(breedName, callback) {
       } else if (body !== "[]") {
         const data = JSON.parse(body);
         //console.log(data[0]["description"]);
-        callback(null, data[0]["description"]);
+        callback(null, data[0]["description"].trim());
       }
     }
   });
